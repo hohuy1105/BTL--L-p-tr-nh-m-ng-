@@ -21,6 +21,7 @@
 
 ## 📖 1. Giới thiệu
 UDP là một trong những giao thức truyền tải chính của bộ giao thức Internet (TCP/IP). Khác với TCP, vốn cần thiết lập kết nối và đảm bảo tính toàn vẹn dữ liệu, UDP hoạt động theo mô hình không kết nối (connectionless). Điều này có nghĩa là khi một ứng dụng gửi dữ liệu, các gói tin (datagram) sẽ được truyền trực tiếp đến địa chỉ đích mà không cần bất kỳ thủ tục bắt tay (handshake) nào.
+
 Đặc điểm quan trọng:
 Đơn giản và nhẹ: UDP không duy trì trạng thái phiên làm việc, giúp tiết kiệm tài nguyên hệ thống.
 Hiệu năng cao: Tốc độ truyền nhanh do không có bước kiểm tra, xác nhận hay sắp xếp lại gói tin.
