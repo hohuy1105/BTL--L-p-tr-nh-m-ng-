@@ -20,22 +20,18 @@
 </div>
 
 ## 📖 1. Giới thiệu
-Giới thiệu về UDP (User Datagram Protocol)
-Trong lĩnh vực mạng máy tính, UDP (User Datagram Protocol) là một trong những giao thức quan trọng thuộc tầng Transport trong mô hình TCP/IP. UDP được sử dụng để truyền dữ liệu giữa các thiết bị trong mạng một cách nhanh chóng, gọn nhẹ mà không cần quá nhiều cơ chế kiểm soát phức tạp.
-
-🔹 Đặc điểm chính của UDP
-
-Không kết nối (Connectionless):
-Trước khi gửi dữ liệu, UDP không cần thiết lập kết nối giữa client và server như TCP. Vì vậy, việc truyền tải diễn ra nhanh hơn.
-
-Không đảm bảo (Unreliable):
-UDP không đảm bảo dữ liệu sẽ đến nơi, không kiểm tra lỗi toàn vẹn dữ liệu, không có cơ chế xác nhận gói tin đã được nhận.
-
-Đơn giản và hiệu quả:
-UDP có header chỉ 8 byte, nhỏ hơn rất nhiều so với TCP (20 byte), giúp tiết kiệm băng thông.
-
-Truyền broadcast/multicast:
-UDP hỗ trợ gửi dữ liệu tới nhiều thiết bị cùng lúc, rất hữu ích trong các ứng dụng cần phân phối dữ liệu đồng thời.
+UDP là một trong những giao thức truyền tải chính của bộ giao thức Internet (TCP/IP). Khác với TCP, vốn cần thiết lập kết nối và đảm bảo tính toàn vẹn dữ liệu, UDP hoạt động theo mô hình không kết nối (connectionless). Điều này có nghĩa là khi một ứng dụng gửi dữ liệu, các gói tin (datagram) sẽ được truyền trực tiếp đến địa chỉ đích mà không cần bất kỳ thủ tục bắt tay (handshake) nào.
+Đặc điểm quan trọng:
+Đơn giản và nhẹ: UDP không duy trì trạng thái phiên làm việc, giúp tiết kiệm tài nguyên hệ thống.
+Hiệu năng cao: Tốc độ truyền nhanh do không có bước kiểm tra, xác nhận hay sắp xếp lại gói tin.
+Không tin cậy tuyệt đối: Gói tin có thể bị mất, trùng lặp hoặc đến sai thứ tự mà không có cơ chế tự động khắc phục.
+Khả năng broadcast/multicast: UDP hỗ trợ gửi dữ liệu đến nhiều thiết bị cùng lúc, phù hợp cho các ứng dụng truyền thông nhóm.
+Ứng dụng thực tế:
+UDP thường được sử dụng trong các hệ thống cần tốc độ và độ trễ thấp hơn là độ tin cậy tuyệt đối, ví dụ:
+Trò chơi trực tuyến (online gaming): truyền thông tin trạng thái nhân vật theo thời gian thực.
+Ứng dụng gọi thoại/video (VoIP, video call): truyền âm thanh, hình ảnh với độ trễ thấp.
+Streaming (truyền phát video, audio): ưu tiên tốc độ để người dùng xem liên tục.
+DNS (Domain Name System): truy vấn tên miền cần phản hồi nhanh, không nhất thiết phải có kết nối lâu dài.
 
 🔹 Cấu trúc gói tin UDP
 
