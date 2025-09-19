@@ -77,7 +77,8 @@ Header Sequence Number: số thứ tự gói tin để ghép file đúng.
 
 ## Nguồn
 DaiNam University. 
-Lê Xuân Dương - 1671020074
-Gmail: lexuanduong129@gmail.com
+Hồ Quang Huy - 1671020137
+Gmail: hoquanghuyhb1@gmail.com
+
 
 ---
