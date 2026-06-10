@@ -42,6 +42,9 @@ Một chu trình vận hành tự động bao gồm 4 bước chính:
 * **Actuators (Servo & Cảm biến):** Động cơ Servo điều khiển thanh chắn Barrier giao thông vật lý và cảm biến hồng ngoại phát hiện khoảng cách xe.
 * **HTML5 / CSS3 / JavaScript:** Xây dựng giao diện **Eco Smart City Dashboard** theo phong cách đồ họa sang trọng *Glassmorphism* (làm mờ nền kính công nghệ cao).
 
+
+</div>
+
 ## 📝 3. Hướng dẫn cài đặt và sử dụng
 
 Chương trình được phân tách biệt lập rõ ràng thành 3 phân hệ chức năng: `hardware` (ESP32), `backend` (Python FastAPI AI) và `frontend` (Web Dashboard). Dưới đây là hướng dẫn chi tiết các bước để cài đặt cấu hình và vận hành hệ thống.
@@ -101,34 +104,3 @@ Nghiên cứu sinh thực hiện: Hồ Quang Huy
 Mã số sinh viên (MSSV): 1671020137
 Phòng nghiên cứu ứng dụng: AIoTLab Đô thị thông minh.
 Hòm thư liên hệ chính thức: hoquanghuyhb1@gmail.com
-</div>
-
-## 📝 4. Hướng dẫn cài đặt và sử dụng
-
-Chương trình được phân tách biệt lập rõ ràng thành 3 phân hệ chức năng: `hardware` (ESP32), `backend` (Python FastAPI AI) và `frontend` (Web Dashboard). Dưới đây là hướng dẫn chi tiết các bước để cài đặt cấu hình và vận hành hệ thống.
-
-## Hướng dẫn cài đặt
-
-### 1. Cấu hình lõi phần cứng trên phần mềm Arduino IDE
-* **Yêu cầu phần cứng:** 0.1 mạch SoC Wi-Fi ESP32, 0.1 cảm biến khoảng cách phản xạ hồng ngoại, 0.1 động cơ Servo SG90/MG996, dây cắm giắc nối cáp USB Mac dữ liệu.
-* **Thêm đường dẫn gói mạch ESP32:**
-  - Trên máy Mac, Huy mở Arduino IDE lên -> Nhấp chọn mục **Arduino IDE** trên thanh menu cao nhất -> Chọn **Settings...** (Preferences).
-  - Tìm đến ô **`Additional Boards Manager URLs`** và dán chính xác đường dẫn mạng của hãng *Espressif Systems* sau:
-    ```text
-    [https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json](https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json)
-    ```
-  - Nhấn nút **OK** để lưu lại cấu hình.
-* **Tải Driver Core ESP32:**
-  - Nhìn sang thanh công cụ dọc ngoài cùng cạnh bên trái, nhấp chọn vào biểu tượng **Mảnh bo mạch có 4 chân chip** (mục *Boards Manager*).
-  - Tại ô tìm kiếm trên cùng, gõ chữ: `esp32`. Tìm thấy gói mạch **`esp32` by `Espressif Systems`**, Huy nhấn nút **`Install`** màu xanh. Đợi khoảng 1 phút để máy tải về thành công cho đến khi chuyển sang màu xám báo chữ `INSTALLED`.
-* **Nạp Code nhúng:**
-  - Cắm cáp USB nối mạch ESP32 với máy Mac.
-  - Trên thanh công cụ trên cùng, chọn ô trắng -> Click mục **Select other board and port...**
-  - Tại ô tìm kiếm bên trái gõ tìm kiếm và chọn dòng: **`ESP32 Dev Module`**. Nhìn sang mục **Ports** bên phải tích chọn cổng nhận dạng cáp kết nối dạng `/dev/cu.usbserial-...`. Nhấn **OK**.
-  - Huy mở file code nằm trong thư mục `hardware/plant-monitoring-system.ino` lên, sửa lại tên và mật khẩu mạng Wi-Fi lớp học, sau đó bấm nút mũi tên **Upload (➡️)** để nạp code xuống chip. *(Mẹo: Khi màn hình dưới chạy chữ báo `Connecting...___...`, Huy bấm giữ nút BOOT trên mạch 2 giây để mở cổng nạp).*
-
-### 2. Cài đặt Máy chủ Trí tuệ nhân tạo Python Backend
-* Huy mở khung Terminal nằm ngay trên ứng dụng phần mềm biên dịch VS Code và di chuyển thư mục, gõ lệnh cài đặt gói môi trường thư viện:
-  ```bash
-  cd backend
-  pip install -r requirements.txt
